@@ -1,0 +1,45 @@
+header#header-pc {
+  background-color: #00cc99;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    height: 4rem;
+    &__logo {
+      display: flex;
+      align-items: center;
+      gap: 5px;  
+      img {
+        height: 3.2rem; 
+      }
+      &--name{
+        font-size: 2rem;
+        color: white;
+      }
+    }
+  
+    &__nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+  
+    &__button {
+      padding: 0 1.5rem;
+      font-size: 1.4rem;
+      height: 3.2rem;
+      display: flex;
+      align-items: center;
+      color: white;
+      background-color: transparent;
+      border: 1px solid white;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: all 0.3s;
+  
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+    }
+  }
+}
