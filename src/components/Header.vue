@@ -92,7 +92,7 @@ watch(current, (newVal) => {
   console.log('new', newVal[0])
 })
 
-const onChangeMenu = (e) => {
+const onChangeMenu = (e : any) => {
   console.log('e', e)
 }
 </script>

@@ -5,7 +5,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "strict": true,
-    "jsx": "preserve",
+    "jsx": "preserve", 
     "sourceMap": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "paths": {
       "@/*" : ["./src/*"]
-    }
+    },
+   "allowJs": true,
+    "strictFunctionTypes": false,
+    "jsxImportSource": "vue"
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "exclude": ["node_modules" , "dist"],
