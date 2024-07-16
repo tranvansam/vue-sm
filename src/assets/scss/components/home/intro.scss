@@ -1,0 +1,106 @@
+.hero-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  @media screen and (max-width: 991px) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    &::before {
+      width: 0;
+      height: 0;
+    }
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    gap: 40;
+    .info {
+      width: 40%;
+      margin-right: 20px;
+
+      .sub-title {
+        font-weight: 500;
+        font-size: 3rem;
+        line-height: 1.5;
+        letter-spacing: 0.01em;
+        color: #687690;
+      }
+      .title {
+        margin-top: 8px;
+        font-weight: 700;
+        font-size: 6.2rem;
+        line-height: 1.19;
+        color: #000336;
+      }
+      .desc {
+        margin-top: 30px;
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 1.78;
+        color: map-get($colors, new-gray-500 );
+      }
+    }
+    .hero-img-wrap {
+      overflow: hidden;
+      position: relative;
+      flex: 1;
+      &::after {
+        max-width: 500px;
+        padding-top: 56.25%;
+        display: block;
+        content: '';
+      }
+      .hero-img {
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  @media screen and (max-width: 991px) {
+    .content {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      .info {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 1rem;
+      }
+      .hero-img-wrap {
+        width: 100%;
+      }
+    }
+    padding-bottom: 20px;
+  }
+}
+.sub-title {
+  font-family: 'Arial', sans-serif;
+  font-size: 5rem;
+  background: linear-gradient(90deg, #ff6b6b, #958133, #296738, #121719);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  animation: gradient 3s infinite;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

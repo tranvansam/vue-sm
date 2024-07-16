@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import ListPhoto from '@/components/home/ListPhoto.vue'
 </script>
 
 <template>
-  <div class="container home">
-    <h1>Photo cards</h1>
-    <ListPhoto />
+  <div class="home">
+    <Carousel/>
+    <Intro/>
   </div>
 </template>
 

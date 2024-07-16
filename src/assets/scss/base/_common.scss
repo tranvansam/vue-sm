@@ -1,15 +1,19 @@
-
 .container {
-  max-width: 120rem;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 0 1.5rem;
 
-  @media (max-width: 120rem) {
-    width: 100rem;
+  @media (max-width: 1600px) {
+    max-width: 1200px;
   }
-
-  @media (max-width: 99.2rem) {
+  @media (max-width: 1300px) {
+    max-width: 1000px;
+  }
+  @media (max-width: 1000px) {
     width: calc(100vw - 2rem);
     padding: 0 1rem;
   }
+}
+.bg-main{
+  background-color: map-get($colors, main );
 }

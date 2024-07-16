@@ -5,6 +5,7 @@ import router from './routers'
 import { registerGlobalComponents } from './utils/importGlobal'
 import './assets/css/reset.css'
 import './assets/css/setting.css'
+import 'ant-design-vue/dist/reset.css';
 
 const app = createApp(App)
 
