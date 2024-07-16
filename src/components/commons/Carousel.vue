@@ -13,8 +13,7 @@
 </template>
 
 <style lang="scss" scoped>
-::v-deep {
-  .slick-slide {
+ .slick-slide {
     text-align: center;
     line-height: 160px;
     min-height: 160px;
@@ -67,5 +66,4 @@
       }
     }
   }
-}
 </style>
