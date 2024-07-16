@@ -1,7 +1,7 @@
 <template>
   <a-carousel autoplay>
     <div class="item item-1">
-      <img src="@/assets/img/DayHoc.jpg" alt="" srcset="" />
+      <img src="@/assets/img/dayHoc.jpg" alt="" srcset="" />
     </div>
     <div class="item item-2">
       <img src="@/assets/img/bieudien.jpg" alt="" srcset="" />
