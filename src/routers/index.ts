@@ -11,6 +11,7 @@ const router = createRouter({
       component: Home,
       meta : {
         layout: 'default',
+        title: 'Ảo thuật bảo lam'
       }
     },
     {
@@ -19,9 +20,13 @@ const router = createRouter({
       component: Store,
       meta : {
         layout: 'default',
+        title: 'Cửa hàng ảo thuật'
       }
     }
   ]
 })
-
+router.beforeEach((to, from, next) => {
+  document.title = String(to?.meta?.title) || 'Ảo thuật bảo lam';
+  next();
+});
 export default router
