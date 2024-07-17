@@ -9,11 +9,14 @@ declare module 'vue' {
   export interface GlobalComponents {
     ACarousel: typeof import('ant-design-vue/es')['Carousel']
     AMenu: typeof import('ant-design-vue/es')['Menu']
+    ASpin: typeof import('ant-design-vue/es')['Spin']
     CardItem: typeof import('./src/components/home/CardItem.vue')['default']
     Carousel: typeof import('./src/components/commons/Carousel.vue')['default']
+    Error: typeof import('./src/components/commons/Error.vue')['default']
     Header: typeof import('./src/components/Header.vue')['default']
     Intro: typeof import('./src/components/home/Intro.vue')['default']
     ListPhoto: typeof import('./src/components/home/ListPhoto.vue')['default']
+    Loading: typeof import('./src/components/commons/Loading.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

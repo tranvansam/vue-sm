@@ -1,11 +1,21 @@
 <script setup>
-import Header from '../components/Header.vue'
+import { onMounted, ref } from 'vue'
+
+const isLoading = ref(true)
+onMounted(() => {
+  setTimeout(() => {
+    isLoading.value = false
+  }, 1000)
+})
 </script>
 
 <template>
   <div>
-    <Header />
-    <slot />
+    <Loading v-if="isLoading" />
+    <Header class="header-pc"/>
+    <div class="content">
+      <slot />
+    </div>
   </div>
 </template>
 
