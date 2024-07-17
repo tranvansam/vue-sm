@@ -15,7 +15,9 @@
               nghiệm độc đáo và thú vị cho khán giả của mình. Hãy để tôi mang
               đến những phút giây kỳ diệu và góp phần làm cho sự kiện của bạn
               trở nên đặc biệt hơn ...
-              <a href="#!" class="btn hero-cta">Xem thêm</a>
+              <a href="#!" class="btn hero-cta" @click.stop="onClickAdd"
+                >Xem thêm</a
+              >
             </span>
           </p>
         </div>
@@ -37,6 +39,20 @@
 </template>
 <script setup>
 import { onMounted } from 'vue'
+import { useRouter } from 'vue-router'
+const router = useRouter()
+const onClickAdd = () => {
+  trackButtonClick()
+  router.push('/store')
+}
+const trackButtonClick = () => {
+  if (typeof window.gtag !== 'undefined') {
+    window?.gtag('event', 'click', {
+      event_category: 'button',
+      event_label: 'Click button add',
+    })
+  }
+}
 
 onMounted(() => {})
 </script>
