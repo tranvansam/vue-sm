@@ -3,11 +3,20 @@
   position: relative;
   .logo {
     position: absolute;
-    top: 5px;
+    top: .4rem;
     left: -10px;
+    width: 200px;
+    .img-bl{
+      height: 5.8rem;
+    }
+    .img-logo{
+      position: absolute;
+      top: -0.6rem;
+      left: 30px;
+    }
   }
   .menu {
-    padding-left: 120px;
+    padding-left: 200px;
   }
   .menu-custom {
     background-color: map-get($colors, main );

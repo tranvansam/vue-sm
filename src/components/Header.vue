@@ -2,7 +2,12 @@
   <div class="bg-main">
     <div class="container header">
       <a class="logo" href="#">
-        <img src="@/assets/img/logo.svg" style="width: 100px" alt="Besnik." />
+        <img src="@/assets/img/nenbl.png" class="img-bl" alt="Besnik." />
+        <img
+          src="@/assets/img/logo.svg"
+          class="img-logo"
+          style="width: 155px"
+          alt="Besnik." />
       </a>
       <div class="menu">
         <a-menu
@@ -18,6 +23,7 @@
 <script lang="ts" setup>
 import { h, ref } from 'vue'
 import {
+  ShopOutlined,
   HomeOutlined,
   GlobalOutlined,
   MailOutlined,
@@ -39,6 +45,7 @@ const items = ref<any>([
   {
     key: 'client',
     icon: () => h(AppstoreOutlined),
+    class:'sam',
     label: 'Đánh giá khách hàng',
     title: 'Đánh giá khách hàng',
   },
@@ -50,49 +57,69 @@ const items = ref<any>([
     children: [
       {
         type: 'groups',
-        label: 'Item 1',
+        label: 'Biểu diễn ảo thuật',
         children: [
           {
-            label: 'Option 1',
+            label: 'Biểu diễn ảo thuật cận cẩn',
             key: 'setting:1',
           },
           {
-            label: 'Option 2',
+            label: 'Biểu diễn ảo thuật sân khấu',
             key: 'setting:2',
           },
         ],
       },
       {
         type: 'groups',
-        label: 'Item 2',
+        label: 'Chú hề bong bóng',
         children: [
           {
-            label: 'Option 3',
+            label: 'Chú hề hoạt náo',
             key: 'setting:3',
           },
           {
-            label: 'Option 4',
+            label: 'Chú hề kết hợp bóng bóng',
             key: 'setting:4',
           },
         ],
       },
+      {
+        type: 'groups',
+        label: 'Dạy ảo thuật',
+        key: 'setting:3',
+      },
     ],
   },
   {
-    key: 'alipay',
+    key: 'cuahang',
+    label: 'Cửa hàng',
+    icon: () => h(ShopOutlined),
+    children: [
+      {
+        type: 'groups',
+        label: 'Dụng cụ ảo thuật tại bàn',
+      },
+      {
+        type: 'groups',
+        label: 'Dụng cụ ảo thuật sân khấu',
+      },
+    ],
+  },
+  {
+    key: 'lienhe',
+    // label: 'liên hệ',
     label: h(
-      'a',
-      { href: 'https://antdv.com', target: '_blank' },
-      'Navigation Four - Link'
+      'a-button',
+      {type : "primary" , class:"btn-login"},
+      'Đăng nhập / Đăng ký'
     ),
-    title: 'Navigation Four - Link',
   },
 ])
 watch(current, (newVal) => {
   console.log('new', newVal[0])
 })
 
-const onChangeMenu = (e : any) => {
+const onChangeMenu = (e: any) => {
   console.log('e', e)
 }
 </script>
