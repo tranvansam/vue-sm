@@ -12,7 +12,8 @@ onMounted(() => {
 <template>
   <div>
     <Loading v-if="isLoading" />
-    <Header class="header-pc"/>
+    <!-- <HearderInfo /> -->
+    <Header class="header-pc" />
     <div class="content">
       <slot />
     </div>

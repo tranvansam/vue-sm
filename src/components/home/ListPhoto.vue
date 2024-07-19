@@ -10,7 +10,6 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import CardItem from './CardItem.vue'
 
 const photos = ref([
   { id: 1, img: '/src/assets/images/landscape.jpg', des: 'sam tran van photo' },

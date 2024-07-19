@@ -7,6 +7,7 @@ import './assets/css/reset.css'
 import './assets/css/setting.css'
 import 'ant-design-vue/dist/reset.css';
 
+
 const app = createApp(App)
 declare global {
   interface Window {
@@ -21,7 +22,6 @@ router.afterEach((to, from) => {
     });
   }
 });
-
 
 app.use(createPinia())
 app.use(router)

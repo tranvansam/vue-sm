@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-main">
+  <div class="main">
     <div class="hero-wrap container">
       <div class="content">
         <div class="info">
