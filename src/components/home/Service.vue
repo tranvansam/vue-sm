@@ -35,7 +35,7 @@
               </a>
             </li>
             <li class="guide-item">
-              <img src="@/assets/img/dayhoc.jpg" alt="Seller" class="icon" />
+              <img src="@/assets/img/dayHoc.jpg" alt="Seller" class="icon" />
               <h3 class="title">Dạy ảo thuật</h3>
               <a href="#!" class="link">
                 <span>Giá chỉ từ 100K</span>
