@@ -14,7 +14,7 @@
       class="social-button zalo">
       <span :style="{ fontSize: '16px' }">Zalo</span>
     </a>
-    <a href="tel:0868354016" class="social-button phone">
+    <a href="tel:0979601292" class="social-button phone">
       <PhoneOutlined />
     </a>
     <a
