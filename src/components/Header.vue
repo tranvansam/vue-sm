@@ -56,7 +56,7 @@ const items = ref<any>([
     title: 'Dịch vụ',
     children: [
       {
-        type: 'groups',
+        type: 'group',
         label: 'Biểu diễn ảo thuật',
         children: [
           {
@@ -70,7 +70,7 @@ const items = ref<any>([
         ],
       },
       {
-        type: 'groups',
+        type: 'group',
         label: 'Chú hề bong bóng',
         children: [
           {
