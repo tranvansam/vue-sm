@@ -13,6 +13,7 @@
     <div style="padding: 30px 10px;">
       <Map />
     </div>
+    <Phone />
   </div>
 </template>
 

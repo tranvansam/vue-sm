@@ -35,6 +35,7 @@ declare module 'vue' {
     ListPhoto: typeof import('./src/components/home/ListPhoto.vue')['default']
     Loading: typeof import('./src/components/commons/Loading.vue')['default']
     Map: typeof import('./src/components/home/Map.vue')['default']
+    Phone: typeof import('./src/components/home/Phone.vue')['default']
     Posts: typeof import('./src/components/home/Posts.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
