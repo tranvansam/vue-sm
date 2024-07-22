@@ -1,4 +1,8 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { ref } from 'vue';
+
+const value = ref('')
+</script>
 
 <template>
   <div class="contact">
