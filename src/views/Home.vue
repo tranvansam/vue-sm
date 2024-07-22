@@ -9,6 +9,7 @@
     <Posts />
     <ListNew />
     <Service />
+    <Contact/>
     <div style="padding: 30px 10px;">
       <Map />
     </div>
