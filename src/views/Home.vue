@@ -2,6 +2,7 @@
 
 <template>
   <div class="home">
+    <Test />
     <Carousel />
     <Intro />
     <Evaluate />
@@ -9,8 +10,8 @@
     <Posts />
     <ListNew />
     <Service />
-    <Contact/>
-    <div style="padding: 30px 10px;">
+    <Contact />
+    <div style="padding: 30px 10px">
       <Map />
     </div>
     <Phone />
