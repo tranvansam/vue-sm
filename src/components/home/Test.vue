@@ -27,7 +27,7 @@ const handleLoginTwitter = async () => {
 <template>
   <div class="contact">
     <p>sam</p>
-    <button @click="hanldeLoginTwitter">Login twitter</button>
+    <button @click="handleLoginTwitter">Login twitter</button>
   </div>
 </template>
 <style lang="scss" scoped>
