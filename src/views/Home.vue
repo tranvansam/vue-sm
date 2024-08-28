@@ -2,7 +2,6 @@
 
 <template>
   <div class="home">
-    <Test />
     <Carousel />
     <Intro />
     <Evaluate />
