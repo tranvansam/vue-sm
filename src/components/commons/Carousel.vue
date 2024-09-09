@@ -1,17 +1,22 @@
 <template>
   <a-carousel autoplay>
-    <div class="item item-1">
-      <img src="https://storage.dev.permate.com/files/1/8/1724822991.5428054/anhbln1.jpg" alt="" srcset="" />
-    </div>
-    <div class="item item-2">
-      <img src="https://storage.dev.permate.com/files/1/8/1724823072.8072002/anhbln2.jpg" alt="" srcset="" />
-    </div>
-    <div class="item item-3">
-      <img src="https://storage.dev.permate.com/files/1/8/1724823109.1849957/anhbln3.jpg" alt="" srcset="" />
+    <div v-for="(item, index) in items" :key="'bgr'+index" class="item item-1">
+      <img :src="item?.link" alt="" srcset="" />
     </div>
   </a-carousel>
 </template>
+<script setup>
+import { computed, onMounted, ref } from 'vue'
+import { useCommonsStore } from '@/stores/commons'
+const props = defineProps({
+  items: {
+    type: Array,
+    required: true,
+    default: () => ([]),
+  },
+});
 
+</script>
 <style lang="scss" scoped>
 .slick-slide {
   text-align: center;

@@ -1,0 +1,87 @@
+.show-image {
+  // width: 30rem;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  &__content {
+    position: absolute;
+    bottom: 3rem;
+    color: white;
+    z-index: 12;
+    left: 10px;
+    right: 10px;
+    text-align: center;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  }
+  &::v-deep {
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      font-size: 20px;
+      font-weight: 700;
+      border: 1px solid white;
+      padding: 5px 8px;
+      border-radius: 4px;
+      color: white;
+      background-color: rgb(201, 197, 197, 0.3);
+    }
+  }
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px; /* Padding cho container */
+  margin-bottom: 3rem;
+}
+.show-img-wrap{
+  background-color: map-get($colors, main-bg );
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+/* Định dạng cho các item trong grid */
+.grid-item {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ảnh được hiển thị chiếm 100% kích thước grid item */
+.grid-item .show-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 10px; /* Bo tròn góc các khối ảnh */
+  background-color: #59595b;
+}
+.grid-item:nth-of-type(odd) {
+  margin-top: 5rem;
+}
+@media screen and (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Giảm số cột còn 2 khi màn hình nhỏ hơn */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    .grid-item:nth-of-type(odd) {
+      margin-top: 0;
+    }
+    margin-bottom: 2rem;
+  }
+}
+.sub-title {
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 1;
+  color: #000339;
+  text-align: center;
+  margin-bottom: 5rem;
+  margin-top: 4rem;
+}

@@ -5,6 +5,18 @@
         <div class="info">
           <p class="sub-title">Ảo thuật gia</p>
           <h1 class="title">Bảo Lam</h1>
+          <div class="hero-img-wrap hero-mb">
+            <iframe
+              class="hero-img"
+              :width="560"
+              :height="315"
+              src="https://www.youtube.com/embed/IAUFsrZR1ks?si=tbxpSoJgPqELYp05"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+          </div>
           <p class="desc description-container">
             <span id="typing-text">
               Xin chào! Tôi là Bảo Lam, một ảo thuật gia với nhiều năm kinh

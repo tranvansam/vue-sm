@@ -1,18 +1,13 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
+import { useCommonsStore } from '@/stores/commons'
 
-const isLoading = ref(true)
-onMounted(() => {
-  setTimeout(() => {
-    isLoading.value = false
-  }, 2000)
-})
+const useCommonStore = useCommonsStore()
 </script>
 
 <template>
   <div>
-    <Loading v-if="isLoading" />
-    <!-- <HearderInfo /> -->
+    <Loading v-if="useCommonStore.isLoading" />
     <Header class="header-pc" />
     <div class="content">
       <slot />

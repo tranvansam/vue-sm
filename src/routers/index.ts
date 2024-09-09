@@ -23,7 +23,7 @@ const router = createRouter({
         layout: 'default',
         title: 'Cửa hàng ảo thuật',
       },
-    },
+    }
   ],
 })
 router.beforeEach((to, from, next) => {

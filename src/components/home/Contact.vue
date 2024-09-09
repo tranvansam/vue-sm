@@ -27,7 +27,7 @@ const value = ref('')
   padding-top: 3rem;
   padding-bottom: 3rem;
   &-content {
-    background: linear-gradient(to right, #1777ff, #162cbb);
+    background: linear-gradient(to right, red, #bb1637);
     padding: 3rem 1rem;
     border-radius: 1rem;
     .title {
@@ -37,7 +37,7 @@ const value = ref('')
       font-weight: 500;
       color: white;
       .percent {
-        color: red;
+        color: white;
       }
     }
     .form {

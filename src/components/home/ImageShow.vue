@@ -1,0 +1,76 @@
+<script setup lang="ts">
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Navigation } from 'swiper/modules'
+import 'swiper/swiper-bundle.css'
+import { computed, ref } from 'vue'
+import { Carousel, Card, Avatar } from 'ant-design-vue'
+
+import { useCommonsStore } from '@/stores/commons'
+const useCommonStore = useCommonsStore()
+
+const listImages = computed(() => {
+  const listImg = useCommonStore.dataCommons.imageShow || []
+  return listImg?.map((e: any) => ({
+    name: e?.sukien,
+    images: e?.anh
+      ?.split('cut*')
+      .map((i: any) => i.trim())
+      .filter(Boolean),
+  }))
+})
+const item = ref({
+  name: 'Example Room',
+  price: 1200000,
+  images: [
+    'https://source.unsplash.com/random/200x200?sig=1',
+    'https://source.unsplash.com/random/200x200?sig=2',
+    'https://source.unsplash.com/random/200x200?sig=3',
+  ],
+})
+// const listImages = [1, 2, 3, 4, 5, 7, 8]
+
+// Swiper Options
+const swiperOption = ref({
+  slidesPerView: 1,
+  spaceBetween: 10,
+  navigation: true,
+  modules: [Navigation], // Import navigation module
+  loop: true,
+})
+
+// Format large number for price
+const formatLargeNumber = (num: number) => {
+  return num.toLocaleString('en-US')
+}
+</script>
+
+<template>
+  <div class="show-img-wrap">
+    <h2 class="sub-title">Hình ảnh các sự kiện biểu diễn</h2>
+    <div class="grid-container container">
+      <div
+        v-for="(item, idx) in listImages"
+        :key="idx + 'text'"
+        class="grid-item">
+        <div class="show-image">
+          <Swiper v-bind="swiperOption">
+            <SwiperSlide
+              v-for="(img, index) in item.images"
+              :key="index + 'img'"
+              class="image">
+              <a-image :width="'100%'" class="image_url" :src="img" />
+            </SwiperSlide>
+          </Swiper>
+          <p class="show-image__content">
+            {{ item.name }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style
+  scoped
+  lang="scss"
+  src="@/assets/scss/components/home/show-image.scss"></style>
