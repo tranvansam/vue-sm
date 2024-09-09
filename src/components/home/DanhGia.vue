@@ -20,41 +20,21 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { Carousel, Card, Avatar } from 'ant-design-vue'
 
-// Dữ liệu đánh giá khách hàng
 interface Testimonial {
   message: string
   avatar: string
   name: string
   title: string
-  stars: number // Số sao đánh giá
+  stars: number
 }
-
-const testimonials = ref<Testimonial[]>([
-  {
-    message: 'Dịch vụ tuyệt vời, tôi rất hài lòng!',
-    avatar: 'https://randomuser.me/api/portraits/men/1.jpg',
-    name: 'Nguyễn Văn A',
-    title: 'Giám đốc Công ty ABC',
-    stars: 5,
-  },
-  {
-    message: 'Sản phẩm chất lượng, tôi sẽ giới thiệu cho bạn bè!',
-    avatar: 'https://randomuser.me/api/portraits/women/2.jpg',
-    name: 'Trần Thị B',
-    title: 'Nhà thiết kế thời trang',
-    stars: 4,
-  },
-  {
-    message: 'Nhân viên thân thiện, tư vấn nhiệt tình.',
-    avatar: 'https://randomuser.me/api/portraits/men/3.jpg',
-    name: 'Lê Văn C',
-    title: 'Giáo viên',
-    stars: 5,
-  },
-])
+import { useCommonsStore } from '@/stores/commons'
+const useCommonStore = useCommonsStore()
+const testimonials = computed(() => {
+  return useCommonStore?.dataCommons?.testimonials
+})
 </script>
 
 <style lang="scss" scoped>
