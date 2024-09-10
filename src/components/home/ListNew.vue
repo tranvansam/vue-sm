@@ -48,13 +48,12 @@
 
 <script lang="ts" setup>
 import { SafetyCertificateOutlined } from '@ant-design/icons-vue'
-
+import { useCommonsStore } from '@/stores/commons'
+import { computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { linkS3 } from '@/utils/function'
 
 const router = useRouter()
-import { useCommonsStore } from '@/stores/commons'
-import { computed } from 'vue'
 const useCommonStore = useCommonsStore()
 const listPosts = computed(() => {
   return useCommonStore.dataCommons?.posts || []

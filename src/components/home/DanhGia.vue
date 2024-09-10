@@ -21,13 +21,6 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-interface Testimonial {
-  message: string
-  avatar: string
-  name: string
-  title: string
-  stars: number
-}
 import { useCommonsStore } from '@/stores/commons'
 const useCommonStore = useCommonsStore()
 const testimonials = computed(() => {
