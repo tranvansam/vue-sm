@@ -21,8 +21,6 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { Carousel, Card, Avatar } from 'ant-design-vue'
-
 interface Testimonial {
   message: string
   avatar: string

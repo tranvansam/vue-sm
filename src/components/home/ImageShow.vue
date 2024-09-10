@@ -3,7 +3,6 @@ import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Navigation } from 'swiper/modules'
 import 'swiper/swiper-bundle.css'
 import { computed, ref } from 'vue'
-import { Carousel, Card, Avatar } from 'ant-design-vue'
 import { linkS3 } from '@/utils/function'
 
 import { useCommonsStore } from '@/stores/commons'
@@ -18,17 +17,6 @@ const listImages = computed(() => {
       .filter(Boolean),
   }))
 })
-const item = ref({
-  name: 'Example Room',
-  price: 1200000,
-  images: [
-    'https://source.unsplash.com/random/200x200?sig=1',
-    'https://source.unsplash.com/random/200x200?sig=2',
-    'https://source.unsplash.com/random/200x200?sig=3',
-  ],
-})
-// const listImages = [1, 2, 3, 4, 5, 7, 8]
-
 // Swiper Options
 const swiperOption = ref({
   slidesPerView: 1,
