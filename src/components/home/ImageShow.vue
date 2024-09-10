@@ -46,7 +46,7 @@ const formatLargeNumber = (num: number) => {
               v-for="(img, index) in item.images"
               :key="index + 'img'"
               class="image">
-              <a-image :width="'100%'" class="image_url" :src="linkS3(img)" />
+              <a-image :width="'100%'" :height="'400px'" class="image_url" :src="linkS3(img)" />
             </SwiperSlide>
           </Swiper>
           <p class="show-image__content">
