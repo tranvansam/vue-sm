@@ -39,9 +39,9 @@
           </div>
         </div>
       </div>
-      <div class="btn-action">
+      <!-- <div class="btn-action">
         <a-button type="primary" :size="'large'">Xem tất cả bài viết</a-button>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
