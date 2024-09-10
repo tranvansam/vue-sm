@@ -4,10 +4,10 @@ import { Navigation } from 'swiper/modules'
 import 'swiper/swiper-bundle.css'
 import { computed, ref } from 'vue'
 import { Carousel, Card, Avatar } from 'ant-design-vue'
+import { linkS3 } from '@/utils/function'
 
 import { useCommonsStore } from '@/stores/commons'
 const useCommonStore = useCommonsStore()
-
 const listImages = computed(() => {
   const listImg = useCommonStore.dataCommons.imageShow || []
   return listImg?.map((e: any) => ({
@@ -58,7 +58,7 @@ const formatLargeNumber = (num: number) => {
               v-for="(img, index) in item.images"
               :key="index + 'img'"
               class="image">
-              <a-image :width="'100%'" class="image_url" :src="img" />
+              <a-image :width="'100%'" class="image_url" :src="linkS3(img)" />
             </SwiperSlide>
           </Swiper>
           <p class="show-image__content">

@@ -5,12 +5,12 @@
       :key="index"
       class="carousel-item">
       <a-card class="testimonial-card">
-        <p class="testimonial-message">{{ testimonial.message }}</p>
-        <a-avatar :src="testimonial.avatar" class="testimonial-avatar" />
-        <h3 class="testimonial-name">{{ testimonial.name }}</h3>
-        <p class="testimonial-title">{{ testimonial.title }}</p>
+        <p class="testimonial-message">{{ testimonial?.message }}</p>
+        <a-avatar :src="testimonial?.avatar" class="testimonial-avatar" />
+        <h3 class="testimonial-name">{{ testimonial?.name }}</h3>
+        <p class="testimonial-title">{{ testimonial?.title }}</p>
         <div class="stars">
-          <span v-for="star in testimonial.stars" :key="star" class="star"
+          <span v-for="star in testimonial?.stars" :key="star" class="star"
             >&#9733;</span
           >
         </div>
@@ -33,7 +33,7 @@ interface Testimonial {
 import { useCommonsStore } from '@/stores/commons'
 const useCommonStore = useCommonsStore()
 const testimonials = computed(() => {
-  return useCommonStore?.dataCommons?.testimonials
+  return useCommonStore?.dataCommons?.testimonials || []
 })
 </script>
 
